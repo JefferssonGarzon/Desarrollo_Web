@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="CSS/estilosF.css">
+        <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <div class="contenedor-formulario">
+            <div class="wrap">
+                <!-- Formulario -->
+                <form action="" class="formulario" name="formulario_registro" method="GET">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" name="nombre" id="nombre">
+                            <label class="label" for="nombre">Nombre:</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" id="email">
+                            <label class="label" for="email">Correo:</label>
+                        </div> 
+                        <div class="input-group">
+                            <input type="password" name="pass" id="pass">
+                            <label class="label" for="pass">Constraseña:</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="pass2" id="pass2">
+                            <label class="label" for="pass2">Repertir Constraseña:</label>
+                        </div>
+                        <div class="input-group radio">
+                            <input type="radio" name="sexo" id="hombre" value="Hombre">
+                            <label for="hombre">Hombre</label>
+    
+                            <input type="radio" name="sexo" id="mujer" value="Mujer">
+                            <label for="mujer">Mujer</label>
+                        </div>
+                        <div class="input-group checkbox">
+                            <input type="checkbox" name="terminos" id="terminos" value="true">
+                            <label for="terminos">Acepto los terminos y condiciones</label>
+                        </div>
+    
+                        <input type="submit" id="btn-submit" value="Enviar">
+                    </div>
+                </form> 
+            </div>      
+        </div>
+
+        <script src="JS/formulario.js"></script>
+    </body>
+    
+</html>
