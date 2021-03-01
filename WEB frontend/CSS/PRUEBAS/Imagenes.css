@@ -1,0 +1,15 @@
+div {
+    background: darkcyan;
+    width: 100%;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 50%; /* bordear la imagen */
+    /*box-shadow: 5px 5px 4px blue; */
+    padding: 10px;
+    border: solid blue;
+}

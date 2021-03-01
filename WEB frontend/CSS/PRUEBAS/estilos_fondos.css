@@ -1,0 +1,6 @@
+body {
+    background: url(bandera2.png); 
+    background-repeat:no-repeat;
+    background-attachment: fixed; /*imagen de fondo arreglada y fija*/
+    background-position: center 0;
+}

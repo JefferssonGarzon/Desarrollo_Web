@@ -1,0 +1,17 @@
+div{
+    width: 50%;
+    height: 300px; /* aunque no es recomendado*/
+    background: darkgoldenrod;
+    margin: 20px 50px; /* margen arriba y abajo de 20 px e 
+    izquierda y derecha de 50 px*/
+    
+    /*padding margen interior*/
+    padding: 30px;
+
+    /* borde */
+    border: 10px solid black;
+
+    /* display  bloques en linea*/
+    display: inline-block;
+
+}

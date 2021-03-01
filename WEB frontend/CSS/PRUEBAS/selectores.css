@@ -1,0 +1,21 @@
+h2 {/* selector de etiqueta*/
+    color: blue;
+    font-size: 30px;    
+}
+
+/* selectores descendentes: quiere decir en este caso que 
+    solamente modificara los parametros a dentro del parrafo p.*/
+p a{ 
+     color: darkgoldenrod;
+     font-size: 25px; /*unidad de medida*/
+}
+
+.red {
+    font-size: 20px;
+    color: darkred;
+}
+
+a[href="www.rusogratis.com"]{
+    color: darkviolet;
+    font-size: 40px;
+}

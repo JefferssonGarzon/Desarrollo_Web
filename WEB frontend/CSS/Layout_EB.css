@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:rgb(12, 1, 1);
+}
+
+header , .main , footer{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+header .logotipo{
+    background: black;
+}
+
+header img {
+    background: black;
+    display: block;
+    height: auto;
+    margin: auto;
+}
+
+header nav {
+    background: rgb(97, 4, 4);
+    margin-bottom: 1.5%;
+    overflow: hidden;
+}
+
+header nav ul {
+    list-style: none;
+    
+}
+
+header nav ul li {
+    float: left;
+    font-family:"Lobster";
+}
+
+header nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: red;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background: black;
+    color: white;
+    
+}
+
+.main .articles {
+    width: 68.5%;
+    margin-right: 1.5%;
+    float: left;
+}
+
+.main .articles article {
+    padding: 20px;
+    background: rgb(12, 1, 1);
+    margin-bottom: 20px;
+    color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+aside {
+    width: 10%;
+    float: left;
+    padding: 30px;
+    box-sizing: border-box;
+    
+}
+
+aside img {
+    border-radius: 8px;
+    display: block;
+    height: 100%;
+    margin: 100%;
+}
+
+footer {
+    background: black;
+    color: blanchedalmond;
+    clear: both;
+    padding: 10px 0px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+

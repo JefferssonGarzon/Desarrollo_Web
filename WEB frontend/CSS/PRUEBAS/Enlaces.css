@@ -1,0 +1,33 @@
+a {
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px 20px;
+    display: inline-block;
+    background: rgb(87, 66, 184);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 0px black;
+}
+
+a:link { /* links no visitados */
+    color: yellow;
+}
+
+/*a:visited {
+    color: crimson;
+}*/
+
+a:hover { /* diseño al pasar el mouse por el link */
+    text-decoration: underline;
+    background:  black;
+    color: blanchedalmond;
+    box-shadow: 0px 2px 0px yellow;
+}
+
+a:active {
+    background: black;
+    box-shadow: none;
+
+}
+
+ 

@@ -1,0 +1,42 @@
+form {
+    width: 25%;
+    border:1px solid blue;
+    margin: 20px;
+    padding: 20px;
+}
+
+label {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid red;
+     
+}
+
+input:focus, textarea:focus {
+    border: 1px solid white;
+}
+
+input[type="submit"] {
+    margin-bottom: 0px;
+    background:rgb(65, 65, 228);
+    color: white;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background:rgb(92, 92, 228);
+    cursor: pointer;
+}

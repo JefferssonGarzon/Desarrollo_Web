@@ -1,0 +1,23 @@
+body {
+    font-size: 12px;
+}
+
+/* esto es un comentario */
+
+
+/* 1 em equivale al tamaño de fuente establecido
+ej: font-size: 12px, entonces 1em: 12 px-*/
+p {
+    font-size: 1em; 
+    background: blue;
+}
+
+div {
+    background: rgba(0, 0, 0, 0.432);
+    color: gold;
+    width: 100%;
+
+}
+nav, a {
+    background:darkgoldenrod;
+}
