@@ -1,0 +1,30 @@
+<%- include("template/cabecera", {tituloWeb: "EJS"}) %>
+
+    <div class="container">
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% if (arrayMascotas.length > 0) { %>
+                    <% arrayMascotas.forEach(element => { %>
+                        <tr>
+                            <th scope="row"><%= element.id %> </th>
+                            <td><%= element.nombre %></td>
+                            <td><%= element.descripcion %></td>
+                            <td></td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+<%- include("template/footer") %>
+
