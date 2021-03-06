@@ -140,7 +140,7 @@ const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 
 // `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.fcgnd.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`
-const uri = process.env.URI_DB
+const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.fcgnd.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`
 
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log("Base de datos conectada"))
