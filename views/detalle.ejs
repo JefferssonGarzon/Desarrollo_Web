@@ -1,0 +1,99 @@
+<%- include("template/cabecera", {tituloWeb: "Detalle de mascota"}) %>
+    <div class="container">
+        <h1>Detalle MascotaACT</h1>
+        <% if (error) { %>
+            <p>
+                <%= mensaje %> 
+            </p>
+            <a href="/mascotas" class="btn btn-dark btn-block">Volver a mascotas</a>
+        <% } %>
+        <% if (!error) { %>
+
+
+            <form id="formularioEditar" data-id="<%= mascota.id %>">
+                <input type="text"
+                class="form-control my-2"
+                name="nombre"
+                value="<%= mascota.nombre %>"
+                id="nombreEditar">
+
+                <input type="text"
+                class="form-control my-2"
+                name="descripcion"
+                value="<%= mascota.descripcion %>"
+                id="descripcionEditar">
+
+                <button 
+                class="btn btn-warning btn-block">
+                    Editar
+                </button>
+            </form>
+            <hr>
+            <button class="btn btn-danger btn-sn mt-3"
+                id="btnEliminar"
+                data-id="<%= mascota.id %>">
+                   Eliminar
+            </button>
+        <% } %>
+    </div>
+    
+
+<%- include("template/footer") %>
+
+<script>
+
+    const btnEliminar = document.querySelector("#btnEliminar")
+
+    btnEliminar.addEventListener("click", async() =>{
+
+        const id = btnEliminar.dataset.id
+        console.log("Diste click");
+        try {
+            const data = await fetch(`/mascotas/${id}`, {
+                method: "delete"
+            })
+            const res = await data.json()
+
+            if(res.estado){
+                window.location.href = "/mascotas"
+            }else{
+                console.log(res);
+            }
+            
+        } catch (error) {
+            console.log(error);
+        }
+    })
+
+    const formularioEditar = document.querySelector("#formularioEditar")
+
+    formularioEditar.addEventListener("submit", async(e)=>{
+        e.preventDefault()
+
+        const nombre = document.querySelector("#nombreEditar").value
+        const descripcion = document.querySelector("#descripcionEditar").value
+        const id = formularioEditar.dataset.id
+        
+        try {
+            const data = await fetch(`/mascotas/${id}`,{
+                method: "put",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                // si tanto la propiedad como la descripcion tiene el mismo
+                // nombre no es necesario repetir
+                body: JSON.stringify({nombre, descripcion})
+                })
+
+                const res = await data.json()
+
+                if(res.estado){
+                    window.location.href = "/mascotas"
+                }else{
+                    console.log(res);
+                }
+        } catch (error) {
+            console.log(error);
+        }
+    })
+</script>
